@@ -27,7 +27,12 @@ public class Main {
                     int i = input.nextInt();
                     deleteTask(tasks,i);
                     break;
-                case 3: System.out.println("add task");
+                case 3:
+                    System.out.println("Please enter the number of the task you would like to update");
+                    i = input.nextInt();
+                    System.out.println("Please enter the new task description");
+                    a = input.next();
+                    updateTask(tasks,i,a);
                     break;
                 case 4:
                     listTask(tasks);
@@ -57,8 +62,12 @@ public class Main {
 
     public static void listTask(ArrayList tasks){
        for (int i =0; i < tasks.size(); i++){
-           System.out.println(tasks.get(i));
+           System.out.println(i + ": " + tasks.get(i));
        }
+    }
+
+    public static void updateTask(ArrayList tasks, int index, String desc){
+        tasks.set(index-1, desc);
     }
 
 }
