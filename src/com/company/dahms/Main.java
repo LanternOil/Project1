@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        ArrayList<String> tasks = new ArrayList<String>();
+        ArrayList<String> tasks = new ArrayList<>();
 
 
         while (true){
@@ -28,6 +28,7 @@ public class Main {
                     deleteTask(tasks,i);
                     break;
                 case 3:
+                    listTask(tasks);
                     System.out.println("Please enter the number of the task you would like to update");
                     i = input.nextInt();
                     System.out.println("Please enter the new task description");
